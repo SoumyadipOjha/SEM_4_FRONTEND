@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+
+<body onload="ShowTime()">
+    <div id="sh">
+
+    </div>
+
+</body>
+<script>
+
+    function ShowTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+        if(h>12){
+            h=h-12;
+        }
+        var session="AM";
+        if(h>12){
+            session="PM";
+        }
+        var tiime = h + " : " + m + " : " + s+" "+session;
+        document.getElementById("sh").innerHTML = tiime;
+        setTimeout(ShowTime, 1000);
+    }
+
+</script>
+
+</html>

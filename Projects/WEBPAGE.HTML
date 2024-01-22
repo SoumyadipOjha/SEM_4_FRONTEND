@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: aqua;
+
+        }
+        nav{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        footer{
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="height:50px;">
+            <a href="#">HOME</a>
+            <a href="#">CATEGORIES</a>
+            <a href="#">PERSONALIZATION</a>
+            <select>
+                <option value="">BLOGS</option>
+                <option value="">DAILY DEALS</option>
+                <option value="">CAREERS</option>
+                <option value="">ABOUT</option>
+            </select>
+        </nav>
+    </header>
+    <section>
+        <img class="mySlides" src="Screenshot (46).png" style="width:100%">
+        <img class="mySlides" src="img_ny.jpg" style="width:100%">
+        <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+      </section>
+    <footer style="height:50px;">
+
+    </footer>
+    
+</body>
+<script>
+    var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+</html>

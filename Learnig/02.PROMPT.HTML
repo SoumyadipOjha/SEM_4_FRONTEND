@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+<body>
+    Name:<i id="result"></i>
+    <br>
+    <button onclick="call()">Call</button>
+</body>
+<script type="text/javascript">
+    function call(){
+        var res=prompt("Enter Your Name","");
+        document.getElementById('result').innerHTML=res;
+
+    }
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: tomato;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div {
+            background-color: #eeeeee;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #d91275;
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            margin: 8px 0;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #e68bd7;
+            color: #fbfbfb;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d30e81;
+        }
+
+        input[type="number"]#answer {
+            font-weight: bold;
+        }
+        #plates{
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <div>
+        <h3>Enter Number 1:</h3>
+        <input type="number" id="num1" name="num1">
+        <br>
+        <h3>
+            Enter num2:
+        </h3>
+        <input type="number" id="num2" name="num2">
+        </div>
+        <div id="plates">
+        <ol>
+            <button onclick="plus()">+</button>
+            <button onclick="minus()">-</button>
+            <button onclick="multiply()">*</button>
+            <button onclick="modulus()">%</button>
+        </ol>
+    </div>
+    <div>
+        <h3>Answer:</h3>
+        <input type="number" id="answer">
+       
+    </div>
+    </div>
+    
+</body>
+<script >
+    function plus(){
+        var x=parseInt(document.getElementById('num1').value);
+        var y=parseInt(document.getElementById('num2').value);
+        var z=(x+y);
+        document.getElementById('answer').value=z;
+    }
+    function minus(){
+        var x=parseInt(document.getElementById('num1').value);
+        var y=parseInt(document.getElementById('num2').value);
+        var z=(x-y);
+        document.getElementById('answer').value=z;
+    }
+    function multiply(){
+        var x=parseInt(document.getElementById('num1').value);
+        var y=parseInt(document.getElementById('num2').value);
+        var z=(x*y);
+        document.getElementById('answer').value=z;
+    }
+    function modulus(){
+        var x=parseInt(document.getElementById('num1').value);
+        var y=parseInt(document.getElementById('num2').value);
+        var z=(x%y);
+        document.getElementById('answer').value=z;
+    }
+</script>
+</html>

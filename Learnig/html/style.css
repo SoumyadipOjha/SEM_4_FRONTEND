@@ -1,0 +1,57 @@
+.main{
+    width: 1000px;
+    height:450px;
+    background-color: blueviolet;
+
+}
+.A{
+    height: 100px;
+    
+}
+.B1{
+    height:40px;
+    width:200px;
+    float:left;
+    background-color: cadetblue;
+   
+
+}
+.B2{
+    height:40px;
+    width:200px;
+    float:left;
+    background-color: antiquewhite;
+
+}
+.B3{
+    height:40px;
+    width:200px;
+    float:left;
+    background-color: aqua;
+
+}
+.B4{
+    height:40px;
+    width:200px;
+    float:left;
+    background-color: rosybrown;
+
+}
+.B5{
+    height:40px;
+    width:200px;
+    float:left;
+    background-color: rgb(149, 45, 45);
+
+
+}
+.B1C1D1E1F10K{
+    height :200px;
+    background-color: chartreuse;
+}
+.B12{
+    height: 40px;
+    width:250px;
+    background-color: brown;
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+
+	
+</head>
+<body>
+	
+		<h3>Enter First number </h3>
+		<input type="number" id="num1" name="first" >
+		
+		<h3>Enter Second Number</h3>
+		<input type="number" id="num2" name="second" >
+		<h3>Select Arithmetic Option</h3>
+		<select name="" id="ope">
+			<option value="+" >+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<br>
+		<br>
+		<button id="calculate" onclick="calc()">Calculate</button>
+		<h3>Result</h3>
+		<input id="result" name="result" readonly="">
+	
+	
+</body>
+<script type="text/javascript">
+	function calc() {
+    var n1 = document.getElementById('num1').value;
+    var n2 = document.getElementById('num2').value;
+    var op = document.getElementById('ope').value;
+
+    if (op == "+") {
+        var res = parseInt(n1) + parseInt(n2);
+    }
+    if (op == "-") {
+        var res = parseInt(n1) - parseInt(n2);
+    }
+    if (op == "*") {
+        var res = parseInt(n1) * parseInt(n2);
+    }
+    if (op == "/") {
+        var res = parseInt(n1) / parseInt(n2);
+    }
+
+    document.getElementById('result').value = res;
+}
+
+	
+</script>
+</html>
