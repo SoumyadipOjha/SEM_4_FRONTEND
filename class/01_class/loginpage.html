@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
+      color: #87d7e5;
     }
 
     .login-container {
@@ -60,37 +62,39 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="login-container">
-  <h2 style="font-family:monospace;">LOGIN</h2>
-  <form id="loginForm">
-    <div class="input-group">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-    </div>
+  <div class="login-container">
+    <h2 style="font-family:monospace;">LOGIN</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
 
-    <div class="input-group">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-    </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
 
-    <button type="button" class="login-btn" onclick="Login()">Login</button>
-  </form>
-  <h3></h3>
-</div>
+      <button type="button" class="login-btn" onclick="Login()">Login</button>
+    </form>
+    <h3></h3>
+  </div>
 
-<script>
-  function Login() {
-    var x=document.getElementsByName("username")[0].value;
-    // You can add your login logic here
-    document.getElementsByName('username')[0].value="";
-    document.getElementsByTagName("h3")[0].innerHTML=x;
-    alert("Welcome "+x);
-}
+  <script>
+    function Login() {
+      var x = document.getElementsByName("username")[0].value;
+      // You can add your login logic here
+      document.getElementsByName('username')[0].value = "";
+      document.getElementsByTagName("h3")[0].innerHTML = x;
+      alert("Welcome " + x);
+    }
 
-  
-</script>
+
+  </script>
 
 </body>
+
 </html>
