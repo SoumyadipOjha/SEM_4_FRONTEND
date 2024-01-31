@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">
+        click me!
+    </button>
+    <div id="div1"></div>
+</body>
+<script>
+    let btn1 = document.querySelector("#btn1");
+    // btn1.onclick=(e)=>{
+    //     console.log(e);
+    // }
+    btn1.addEventListener("click", () => {
+        console.log("button1 was clicked");
+    })
+    btn1.addEventListener("click", () => {
+        console.log("button1 was clicked again");
+    })
+    // removeEventListner("click",)
+    //mdn docks for more event
+</script>
+
+</html>
