@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div style="margin: 50%;">
+            <input type="button" value="Touch me !!" id="btn" onmouseover="changeColorOnMouseOver()"
+                onmouseout="changeColorOnMouseOut()">
+        </div>
+    </center>
+
+
+    <script>
+        function changeColorOnMouseOver() {
+            document.getElementById("btn").style.background = 'red';
+            document.getElementById("btn").style.color = 'yellow';
+            document.getElementById("btn").style.transform = 'rotate(360deg) scale(1.5)';
+            document.getElementById("btn").style.transition = '2s';
+            document.getElementById("btn").value = 'Bass Touch krna hai';
+
+        }
+
+        function changeColorOnMouseOut() {
+            document.getElementById("btn").style.background = 'cadetBlue';
+            document.getElementById("btn").style.color = 'white';
+            document.getElementById("btn").style.transform = 'rotate(-360deg) scale(1.5)';
+            document.getElementById("btn").value = 'Touch Me';
+        }
+    </script>
+</body>
+
+</html>

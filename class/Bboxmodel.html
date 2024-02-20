@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div
+            style="border: 10px solid black;width: 120px; height: 120px; display: flex; justify-content: center; align-items: center; margin-top:50%">
+            <div
+                style="border: 10px solid black;  width: 80px; height: 80px; display: flex; justify-content: center; align-items: center;">
+                <div
+                    style="border: 10px solid black; width: 50px; height: 50px;display: flex; justify-content: center; align-items: center;">
+                    <button onclick="ghum()">dabao</button>
+                </div>
+            </div>
+        </div>
+       
+    </center>
+    <button onclick="stop()">roko</button>
+</body>
+<script>
+    let val = 0;
+    function ghum() {
+        setInterval(
+            function () {
+                document.getElementsByTagName('div')[0].style.transform = `rotate(${val += 30}deg)`;
+            }, 5
+        )
+
+    }
+    function stop(){
+        document.getElementsByTagName('div')[0].style.transform = `rotate(${val += 360}deg)`;
+    }
+
+
+
+</script>
+
+</html>

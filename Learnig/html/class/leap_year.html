@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Grade:</h2>
+    <h1></h1>
+
+</body>
+<script>
+    // let year = prompt("Year", "");
+    //     // console.log(year);
+    //     if (year % 4 == 0 && year % 100 != 0) {
+    //         document.getElementsByTagName('h1')[0].innerHTML = "leap year";
+    //     }
+    //     else if (year % 400 == 0) {
+    //         document.getElementsByTagName('h1')[0].innerHTML = "leap year";
+    //     }
+    //     else {
+    //         document.getElementsByTagName('h1')[0].innerHTML = "not leap year";
+    //     } 
+
+    // let mark = prompt("marks");
+    // var marks = Number(mark);
+    // if (marks > 90) {
+    //     document.getElementsByTagName('h1')[0].innerHTML = "A";
+    //     // console.log(marks);
+    // }
+
+    // else if (marks > 80 && marks < 90) {
+    //     document.getElementsByTagName('h1')[0].innerHTML = "B";
+    // }
+
+    // else if (marks > 70 && marks < 80) {
+    //     document.getElementsByTagName('h1')[0].innerHTML = "C";
+    // }
+
+    // else if (marks > 60 && marks < 70) {
+    //     document.getElementsByTagName('h1')[0].innerHTML = "D";
+    // }
+
+    // else if (marks < 60) {
+    //     document.getElementsByTagName('h1')[0].innerHTML = "F";
+    // }
+    const fact = (num) => {
+        if (num == 0) {
+            return 1;
+        }
+        else {
+            return num * fact(num - 1);
+        }
+    }
+    for (let i = 1; i <= 10; i++) {
+        if (i == 5 ) {
+            continue;
+        }
+        console.log(fact(i));
+    }
+
+</script>
+
+</html>
