@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div style="margin-top: 45%;
+    ">
+    <input id="string" type="text">
+    <button onclick="rev()">Submit</button>
+    <h3></h3>
+    </div>
+    </center>
+</body>
+<script>
+    function rev() {
+        const s = document.getElementById('string').value;
+        let reversed = '';
+        for (let i = s.length - 1; i >= 0; i--) {
+            reversed += s[i];
+        }
+        document.getElementsByTagName('h3')[0].textContent ="Reversed String: "+ reversed;
+    }
+</script>
+</script>
+
+</html>

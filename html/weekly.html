@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arithmetic Operation</title>
+</head>
+<body>
+
+<div>
+  <label for="operation">Select Operation:</label>
+  <select id="operation">
+    <option value="addition">Addition</option>
+    <option value="subtraction">Subtraction</option>
+    <option value="division">Division</option>
+    <option value="multiplication">Multiplication</option>
+  </select>
+</div>
+
+<div>
+  <label for="num1">Number 1:</label>
+  <input type="number" id="num1">
+</div>
+
+<div>
+  <label for="num2">Number 2:</label>
+  <input type="number" id="num2">
+</div>
+
+<button onclick="performOperation()">Perform Operation</button>
+
+<div id="result"></div>
+
+<script>
+function performOperation() {
+  const operation = document.getElementById('operation').value;
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const resultDiv = document.getElementById('result');
+
+  try {
+    if (isNaN(num1) || isNaN(num2)) {
+      throw new Error('Invalid input: Both inputs must be numbers.');
+    }
+
+    if (operation === 'division' && num2 === 0) {
+      throw new Error('Division by zero is not allowed.');
+    }
+
+    let result;
+    if(operation === 'addition'){
+        result = num1 + num2;
+    } else if (operation === 'subtraction') {
+      result = num1 - num2;
+    } else if (operation === 'division') {
+      result = num1 / num2;
+    } else if (operation === 'multiplication') {
+      result = num1 * num2;
+    } else {
+      throw new Error('Invalid operation: Only "addition", "subtraction", "division", or "multiplication" are allowed.');
+    }
+
+    resultDiv.textContent =  `${result}`;
+  } catch (error) {
+    resultDiv.textContent = `${error.message}`;
+  }
+}
+</script>
+
+</body>
+</html>

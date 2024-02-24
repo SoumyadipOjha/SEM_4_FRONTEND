@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail Gallery</title>
+<style>
+  /* Styles for the thumbnail gallery */
+  .gallery {
+    display: flex;
+  }
+
+  .thumbnails img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .full-image img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <div class="thumbnails">
+    <img src="thumbnail1.jpg" alt="Thumbnail 1" data-full="image1.jpg">
+    <img src="thumbnail2.jpg" alt="Thumbnail 2" data-full="image2.jpg">
+    <img src="thumbnail3.jpg" alt="Thumbnail 3" data-full="image3.jpg">
+  </div>
+  <div class="full-image">
+    <img src="" alt="Full Image">
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const thumbnails = document.querySelectorAll('.thumbnails img');
+  const fullImage = document.querySelector('.full-image img');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+      const fullImageUrl = this.getAttribute('data-full');
+      fullImage.setAttribute('src', fullImageUrl);
+    });
+  });
+});
+</script>
+</body>
+</html>

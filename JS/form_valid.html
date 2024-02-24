@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit.html" onsubmit="return data()">
+        Username   <input type="text" id="i1" autocomplete="off"><br>
+        Contact <input type="text" id="i2" autocomplete="off"><br>
+        Password <input type="password" id="i3"autocomplete="off"><br>
+        Confirm Password <input type="password" id="i4" autocomplete="off"> <br>
+        <button type="submit">Submit</button>
+
+
+    </form>
+</body>
+<script>
+    function data(){
+        var a=document.getElementById("i1").value;
+        var b=document.getElementById("i2").value;
+        var c=document.getElementById("i3").value;
+        var d=document.getElementById("i4").value;
+
+        if(a=="" || b=="" || c=="" || d==""){
+            alert("fill the field");
+            return false;
+        }
+        else if(b.length<10 || b.length>10){
+            alert("enter valid number");
+            return false;
+        }
+        else if(isNaN(b)){
+            alert("enter valid number");
+            return false;
+        }
+        else if(c!=d){
+            alert("Enter same password");
+            return false;
+        }
+        else{
+            return true;
+        }
+        
+    }
+    
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #slide {
+            width: 400px;
+            height: 600px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #slide-container {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        #slide-container:hover #slide {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body onload="changeImage()">
+    <center>
+        <img id="slide" width="400px" height="600px" margin-top="30%">
+    </center>
+    <!-- <button onclick="changeImage()">next</button>
+    <button onclick="changeImagep()">prev</button> -->
+    <script>
+        var i = 0;
+        var images = Array();
+        images[0] = 'https://i.pinimg.com/736x/5a/5d/05/5a5d05455f9536c8d55f3f1a8f152da8.jpg';
+        images[1] = 'https://i.pinimg.com/236x/47/39/5f/47395f8a9a967b670b17c42153d1f1a1.jpg';
+        images[2] = 'https://i.pinimg.com/236x/2d/e1/79/2de179e16cb61efcbfaa86d30f28b0c5.jpg';
+        images[3] = 'https://i.pinimg.com/236x/0d/56/e7/0d56e75365dd0b1165f6c3b6bfc4e22e.jpg';
+        function changeImage() {
+            document.getElementById('slide').src = images[i];
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+             setTimeout(changeImage, 1000);
+        }
+        // function changeImagep() {
+        //     document.getElementById('slide').src = images[i];
+        //     if (i >0) {
+        //         i--;
+        //     } else {
+        //         i = images.length-1;
+        //     }
+        //     // setTimeout(changeImage, 1000);
+        // }
+
+        // // Initial call to start the slideshow
+        // changeImage();
+    </script>
+</body>
+
+</html>
